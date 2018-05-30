@@ -1,0 +1,14 @@
+#mengaktifkan rewrite
+RewriteEngine On
+
+#aturan rewrite urlBaru urlLama extraSetting
+RewriteRule ^user/([0-9a-zA-Z]+) profile.php?user=$1 [NC,L]
+
+#ErrorDocument error tujuanUrl
+ErrorDocument 404 /_Mei2018/htaccess/404.html
+
+#Redirect urlLama urlBaru
+Redirect /_Mei2018/htaccess/profile.php /_Mei2018/htaccess/baru.php
+
+#Default file
+DirectoryIndex standard.php standard2.php
